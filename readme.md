@@ -14,7 +14,7 @@
 
 
 
-## Step1: install latest version java and eclipse
+## Step1: install java and Idea
 
 #### **Installing Java**
 
@@ -76,3 +76,101 @@ Copy the Id and paste it in the position below then click **Send**, then we get 
 
 ![14](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/14.png)
 
+## API Documentation
+
+### 1. Retrieve Receipt Points
+
+- **Endpoint**: `/receipts/{id}/points`
+
+- **HTTP Method**: `GET`
+
+- **Description**: Retrieve the points associated with a given receipt.
+
+- Path Parameters
+
+  - `id` (UUID): The unique identifier of the receipt.
+
+- Response
+
+  - 200 OK
+
+    If the receipt exists.
+
+    - Body
+
+      ```json
+      {
+        "points": <int>
+      }
+      ```
+
+  - 400 Bad Request
+
+    If the receipt doesn't exist or invalid UUID is provided.
+
+    - Body
+
+      ```json
+      {
+        "error": "Receipt with id:<id> not found."
+      }
+      ```
+
+### 2. Save a Receipt
+
+- **Endpoint**: `/receipts/`
+
+- **HTTP Method**: `POST`
+
+- **Description**: Save a new receipt to the database.
+
+- Request Body
+
+  ```json
+  {
+    "retailer": "M&M Corner Market",
+    "purchaseDate": "2022-03-20",
+    "purchaseTime": "14:33",
+    "items": [
+      {
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      },{
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      },{
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      },{
+        "shortDescription": "Gatorade",
+        "price": "2.25"
+      }
+    ],
+    "total": "9.00"
+  }
+  ```
+
+- Response
+
+  - **200**
+
+    ```json
+    {
+    "id": "35818cf8-35e9-4664-b6ca-802b88da46e8"
+    }
+    ```
+
+  - **400 Bad Request**: If the request body is invalid.
+
+------
+
+## Suggested Order of Improvements
+
+1. **Integration with Kafka**:
+   - Before diving into Kubernetes, I'd recommend integrating Kafka first. It will make your application capable of handling real-time data efficiently. The move to an event-driven architecture will ensure that your system is more resilient to spikes in traffic and can scale more smoothly.
+2. **Kubernetes (k8s) Deployment**:
+   - Once you have an event-driven setup with Kafka, deploying on Kubernetes would be the next logical step. Kubernetes will further amplify the benefits you get from Kafka by ensuring that your application is always available, scales automatically, and can be updated or rolled back without downtime.
+3. **Further API Extensions & Documentation**:
+   - As your application grows, you might want to add more functionalities. With every new feature, ensure that your API documentation is kept up-to-date. Clear and concise documentation can greatly accelerate development and debugging efforts, especially when working in a team.
+4. **Monitoring & Logging**:
+   - With your infrastructure set up, you should invest in good monitoring and logging tools. This will help you keep an eye on your system's health and debug any issues that arise.
