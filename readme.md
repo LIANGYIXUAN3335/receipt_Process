@@ -28,53 +28,31 @@ Mac - https://www.youtube.com/watch?v=U3kTdMPlgsY
 
 Troubleshooting Java Installation - https://www.youtube.com/watch?v=UI_PabQ1YB0
 
-#### **Installing Eclipse**
+#### **Installing IntelliJ IDEA**
 
-Windows - https://www.youtube.com/watch?v=toY06tsME-M
-
-Others - https://www.youtube.com/watch?v=XveQ9Gq41UM
+https://www.jetbrains.com/help/idea/installation-guide.html
 
  ### Attention : 
 
  A video of STEPS below,  you can also see the picture steps below alternatively.
 
-https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/quick%20guide%20of%20running%20this%20application.mp4
-
-## Step2: Import it in eclipse
+## Step2: Import it in Idea
 
 Download this package to your local repository.
 
-Open eclipse choose **File -> Import -> Maven -> Existing maven projects**.
+Open eclipse choose **File -> Open-> Folder**.
 
-![2](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/2.png)
+![image-20231005174410381](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005174410381.png)
 
-When you see the **pom file** as below , click **finish**.
 
-![3](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/3.png)
 
-Right click **project name -> Properties-> Java build path-> double click [jre system library]** 
+Edit configuration and run
 
-![5](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/5.png)
-
-Choose **Execution environment -> JavaSE -17**   then apply 
-
-![6](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/6.png)
-
-then choose **Java Compiler** and save settings as below.
-
-![7](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/7.png)
-
-Open the main class **ReceiptProcessApplication.java** and **right click and select" run as" -> 1 java application"**
-
-![8](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/8.png)
-
-Choose **window -> show view -> console**
-
-![9](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/9.png)
+![image-20231005174539012](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005174539012.png)
 
 When you see this, that means the web application is start with no error.
 
-![10](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/10.png)
+![image-20231005174637935](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005174637935.png)
 
 ## Step3:
 
