@@ -42,17 +42,17 @@ Download this package to your local repository.
 
 Open eclipse choose **File -> Open-> Folder**.
 
-![image-20231005174410381](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005174410381.png)
+![image-20231005174410381](D:\github\receiptProcess\receiptProcess\image-20231005174410381.png)
 
 
 
 Edit configuration and run
 
-![image-20231005174539012](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005174539012.png)
+![image-20231005174539012](D:\github\receiptProcess\receiptProcess\image-20231005174539012.png)
 
 When you see this, that means the web application is start with no error.
 
-![image-20231005174637935](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005174637935.png)
+![image-20231005174637935](D:\github\receiptProcess\receiptProcess\image-20231005174637935.png)
 
 ## Step3:
 
@@ -72,7 +72,7 @@ Then we can find the Response below with generated ID of  the Receipt we've post
 
 If the ID is wrong, we will get 400 bad request.
 
-![image-20231005173935864](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005173935864.png)
+![image-20231005173935864](D:\github\receiptProcess\receiptProcess\image-20231005173935864.png)
 
 Copy the Id and paste it in the position below then click **Send**, then we get  **{"points ": "xx" }** below in the response body. 
 
