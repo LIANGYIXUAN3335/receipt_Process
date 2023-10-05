@@ -11,7 +11,6 @@ public class ItemDescriptionMultipleOfThreePointsCalculator implements PointsCal
         for (Item item : receipt.getItems()) {
             if (item.getShortDescription().trim().length() % 3 == 0) {
                 points += Math.ceil(item.getPrice() * 0.2);
-                System.out.println(item.getShortDescription());
 
             }
         }

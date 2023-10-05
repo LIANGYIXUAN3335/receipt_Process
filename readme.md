@@ -92,6 +92,10 @@ Then we can find the Response below with generated ID of  the Receipt we've post
 
 ![12](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/12.png)
 
+If the ID is wrong, we will get 400 bad request.
+
+![image-20231005173935864](C:\Users\liang\AppData\Roaming\Typora\typora-user-images\image-20231005173935864.png)
+
 Copy the Id and paste it in the position below then click **Send**, then we get  **{"points ": "xx" }** below in the response body. 
 
 ![14](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/14.png)

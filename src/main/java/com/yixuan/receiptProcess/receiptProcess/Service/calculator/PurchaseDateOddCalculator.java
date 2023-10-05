@@ -9,7 +9,6 @@ public class PurchaseDateOddCalculator implements PointsCalculator{
         int points = 0;
         if (receipt.getPurchaseDate().getDayOfMonth() % 2 == 1) {
             points += 6;
-            System.out.println(6);
         }
         return points;
     }
