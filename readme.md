@@ -56,25 +56,15 @@ When you see this, that means the web application is start with no error.
 
 Add **Talend API tester** in chrome extension
 
-![11](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/11.png)
-
 Choose **"POST"** in Method and type "http://localhost:8080/receipts/process" **in** **"SCHEME"** 
 
 Then add a json file Receipt in Body and Choose **"Send"**
 
-![4](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/4.png)
-
 Then we can find the Response below with generated ID of  the Receipt we've posted.
-
-![12](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/12.png)
 
 If the ID is wrong, we will get 400 bad request.
 
-![image-20231005173935864](https://github.com/LIANGYIXUAN3335/receipt_Process/blob/main/readme%20hyperlink/image-20231005173935864.png)
-
 Copy the Id and paste it in the position below then click **Send**, then we get  **{"points ": "xx" }** below in the response body. 
-
-![14](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/14.png)
 
 ## API Documentation
 
