@@ -19,11 +19,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DateTimeValidatorTest {
 
-    private DateTimeValidator validator;  // 使用真实的对象，不是Mock对象
+    private DateTimeValidator validator;  //
     @Mock
     private ConstraintValidatorContext context;
     @Mock
-    private ConstraintValidatorContext.ConstraintViolationBuilder violationBuilder;  // 确保使用完整的类名
+    private ConstraintValidatorContext.ConstraintViolationBuilder violationBuilder;  //
 
     @BeforeEach
     public void setUp() {
@@ -31,7 +31,7 @@ public class DateTimeValidatorTest {
         validator = new DateTimeValidator();
 
         Mockito.when(context.buildConstraintViolationWithTemplate(Mockito.anyString()))
-                .thenReturn(violationBuilder);  // 使用正确的mock对象
+                .thenReturn(violationBuilder);  //
         Mockito.when(context.buildConstraintViolationWithTemplate(Mockito.anyString()))
                 .thenReturn(violationBuilder);
 

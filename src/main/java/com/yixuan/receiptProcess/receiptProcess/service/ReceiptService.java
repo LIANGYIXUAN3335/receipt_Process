@@ -29,6 +29,7 @@ public class ReceiptService {
     }
 
     public List<Receipt> findAllReceipts() {
+
         return repository.findAll();
     }
 

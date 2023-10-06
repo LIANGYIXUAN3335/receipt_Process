@@ -20,7 +20,7 @@ public class DateTimeValidator implements ConstraintValidator<ValidDateTime, Rec
         LocalTime purchaseTime = receipt.getPurchaseTime();
 
         if (purchaseDate == null || purchaseTime == null) {
-            return true;  // @NotNull will catch this
+            return true;
         }
 
         // If the purchase date is today, check the time

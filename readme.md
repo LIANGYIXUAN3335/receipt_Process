@@ -50,7 +50,7 @@ When you see this, that means the web application is start with no error.
 
 Add **Talend API tester** in chrome extension
 
-Choose **"POST"** in Method and type "http://localhost:8080/receipts/process" **in** **"SCHEME"** 
+Choose **"POST"** in Method and type "http://localhost:8080/receipts/process" **in** Talend
 
 Then add a json file Receipt in Body and Choose **"Send"**
 
@@ -74,7 +74,7 @@ Copy the Id and paste it in the position below then click **Send**, then we get 
 
     ```json
     {
-      "points": <int>
+      "points": xxx
     }
     ```
 
@@ -146,11 +146,11 @@ Copy the Id and paste it in the position below then click **Send**, then we get 
 
 ## Suggested Order of Improvements
 
-1. **Integration with Kafka**:
-   - Before diving into Kubernetes, I'd recommend integrating Kafka first. It will make your application capable of handling real-time data efficiently. The move to an event-driven architecture will ensure that your system is more resilient to spikes in traffic and can scale more smoothly.
-2. **Kubernetes (k8s) Deployment**:
-   - Once you have an event-driven setup with Kafka, deploying on Kubernetes would be the next logical step. Kubernetes will further amplify the benefits you get from Kafka by ensuring that your application is always available, scales automatically, and can be updated or rolled back without downtime.
-3. **Further API Extensions & Documentation**:
-   - As your application grows, you might want to add more functionalities. With every new feature, ensure that your API documentation is kept up-to-date. Clear and concise documentation can greatly accelerate development and debugging efforts, especially when working in a team.
-4. **Monitoring & Logging**:
-   - With your infrastructure set up, you should invest in good monitoring and logging tools. This will help you keep an eye on your system's health and debug any issues that arise.
+1. Integration with Kafka
+   - Before I explore Kubernetes, I'll prioritize integrating with Kafka. By doing so, my application will be adept at handling real-time data. Adopting an event-driven architecture will ensure that our system is robust against traffic spikes and scales easily.
+2. Kubernetes (k8s) Deployment
+   - After setting up an event-driven environment with Kafka, my next step will be deploying on Kubernetes. This will bolster the advantages derived from Kafka, guaranteeing that our application remains accessible, scales autonomously, and undergoes updates or rollbacks without any downtime.
+3. Further API Extensions & Documentation
+   - I plan to expand our functionalities as the application evolves. With every new addition, I'll make sure our API documentation is current. Clear documentation will undoubtedly expedite our development and debugging processes, especially in a team environment.
+4. Monitoring & Logging
+   - I understand the importance of insights, so next time I will add some logs. This will aid in keeping tabs on our system's health and resolving any emerging issues.
