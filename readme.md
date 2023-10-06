@@ -2,13 +2,7 @@
 
 **Func 1:** Post  Receipt info in json format
 
-![4](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/4.png)
-
-![12](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/12.png)
-
 **Func 2:** Get points of the Receipt by id
-
-![14](https://github.com/LIANGYIXUAN3335/receiptProcess/blob/main/readme%20hyperlink/14.png)
 
 # Guide of start this spring boot application
 
@@ -68,89 +62,85 @@ Copy the Id and paste it in the position below then click **Send**, then we get 
 
 ## API Documentation
 
+------
+
 ### 1. Retrieve Receipt Points
 
-- **Endpoint**: `/receipts/{id}/points`
+#### Response
 
-- **HTTP Method**: `GET`
+- **200 OK**: Receipt's points retrieved successfully.
 
-- **Description**: Retrieve the points associated with a given receipt.
-
-- Path Parameters
-
-  - `id` (UUID): The unique identifier of the receipt.
-
-- Response
-
-  - 200 OK
-
-    If the receipt exists.
-
-    - Body
-
-      ```json
-      {
-        "points": <int>
-      }
-      ```
-
-  - 400 Bad Request
-
-    If the receipt doesn't exist or invalid UUID is provided.
-
-    - Body
-
-      ```json
-      {
-        "error": "Receipt with id:<id> not found."
-      }
-      ```
-
-### 2. Save a Receipt
-
-- **Endpoint**: `/receipts/`
-
-- **HTTP Method**: `POST`
-
-- **Description**: Save a new receipt to the database.
-
-- Request Body
-
-  ```json
-  {
-    "retailer": "M&M Corner Market",
-    "purchaseDate": "2022-03-20",
-    "purchaseTime": "14:33",
-    "items": [
-      {
-        "shortDescription": "Gatorade",
-        "price": "2.25"
-      },{
-        "shortDescription": "Gatorade",
-        "price": "2.25"
-      },{
-        "shortDescription": "Gatorade",
-        "price": "2.25"
-      },{
-        "shortDescription": "Gatorade",
-        "price": "2.25"
-      }
-    ],
-    "total": "9.00"
-  }
-  ```
-
-- Response
-
-  - **200**
+  - Body:
 
     ```json
     {
-    "id": "35818cf8-35e9-4664-b6ca-802b88da46e8"
+      "points": <int>
     }
     ```
 
-  - **400 Bad Request**: If the request body is invalid.
+- **400 Bad Request**: If an invalid UUID is provided or the specified receipt does not exist.
+
+  - Body:
+
+    ```json
+    {
+      "error": "Receipt with id:<id> not found."
+    }
+    ```
+
+### 2. Save a Receipt
+
+#### Response
+
+- **200 OK**: Receipt saved successfully with a unique identifier returned.
+
+  - Body:
+
+    ```json
+    {
+      "id": "<UUID>"
+    }
+    ```
+
+- **400 Bad Request**: If the request body is invalid. This could be due to several reasons:
+
+  - Body (one or more might apply):
+
+    ```json
+    {
+      "error": "Retailer cannot be null or empty."
+    }
+    ```
+
+    ```json
+    {
+      "error": "Purchase date cannot be null or in the future."
+    }
+    ```
+
+    ```json
+    {
+      "error": "Purchase time cannot be null."
+    }
+    ```
+
+    ```json
+    {
+      "error": "Items list cannot be null."
+    }
+    ```
+
+    ```json
+    {
+      "error": "Total cannot be null, negative, or zero."
+    }
+    ```
+
+    ```json
+    {
+      "error": "Item shortDescription/price is invalid."
+    }
+    ```
 
 ------
 
