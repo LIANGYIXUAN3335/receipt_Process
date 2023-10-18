@@ -23,7 +23,11 @@ public class ReceiptService {
         Receipt receipt = findReceiptById(id);
         if (receipt == null) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             throw new ReceiptNotFoundException("Receipt with id:" + id +" not found");
+=======
+            throw new ReceiptNotFoundException("Receipt with id:" + id +"not found");
+>>>>>>> parent of 1e12e71 (Update ReceiptService.java)
 =======
             throw new ReceiptNotFoundException("Receipt with id:" + id +"not found");
 >>>>>>> parent of 1e12e71 (Update ReceiptService.java)
