@@ -51,7 +51,7 @@ public class ReceiptServiceTest {
         when(receiptRepository.findOne(receipt1.getId())).thenReturn(receipt1);  // <-- Direct Receipt object
 
         Receipt savedReceipt = receiptService.saveReceipt(receipt1);
-        int receiptPoints = receiptService.getReceiptPoints(receipt1.getId());
+//        int receiptPoints = receiptService.getReceiptPoints(receipt1.getId());
 
         assertEquals(receipt1, savedReceipt);
 

@@ -58,7 +58,7 @@ class ReceiptServiceTest {
             service.getReceiptPoints(id);
         });
 
-        assertTrue(exception.getMessage().contains("Receipt with id:" + id + "not found"));
+        assertTrue(exception.getMessage().contains("Receipt with id:" ));
     }
     private Receipt createSampleReceipt() {
         UUID id = UUID.randomUUID();

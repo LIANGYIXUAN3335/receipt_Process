@@ -22,7 +22,7 @@ public class ReceiptService {
     public int getReceiptPoints(UUID id) {
         Receipt receipt = findReceiptById(id);
         if (receipt == null) {
-            throw new ReceiptNotFoundException("Receipt with id: " + id +" not found");
+            throw new ReceiptNotFoundException("Receipt with id:" + id +" not found");
         }
         return accumulator.accumulate(receipt);
     }
