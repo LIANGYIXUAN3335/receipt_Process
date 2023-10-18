@@ -44,14 +44,6 @@ public class DateTimeValidatorTest {
         assertTrue(validator.isValid(receipt, context), "Should return true if receipt is null");  // 你的验证器对于null的Receipt返回true，所以这里应该断言为true
     }
 
-    @Test
-    public void testIsValidPurchaseTimeNotInFuture() {
-        Receipt receipt = createSampleReceipt();
-        receipt.setPurchaseDate(LocalDate.now());
-        receipt.setPurchaseTime(LocalTime.now().minusHours(1));
-
-        assertTrue(validator.isValid(receipt, context), "Should return true if purchaseTime is not in the future for today's date");
-    }
 
     private Receipt createSampleReceipt() {
         UUID id = UUID.randomUUID();

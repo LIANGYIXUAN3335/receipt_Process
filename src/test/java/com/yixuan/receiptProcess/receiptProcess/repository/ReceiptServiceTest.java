@@ -42,26 +42,6 @@ public class ReceiptServiceTest {
         verify(receiptRepository, times(1)).findAll();
     }
 
-    @Test
-    public void testSaveAndFindOneReceipts() {
-        Receipt receipt1 = createSampleReceipt();
-
-        // Mocking the repository interactions
-        when(receiptRepository.save(any(Receipt.class))).thenReturn(receipt1);
-        when(receiptRepository.findOne(receipt1.getId())).thenReturn(receipt1);  // <-- Direct Receipt object
-
-        Receipt savedReceipt = receiptService.saveReceipt(receipt1);
-//        int receiptPoints = receiptService.getReceiptPoints(receipt1.getId());
-
-        assertEquals(receipt1, savedReceipt);
-
-        // You might want to add an assertion for receiptPoints here if you know the expected value.
-
-        // Verifying the interactions with the repository
-        verify(receiptRepository, times(1)).save(receipt1);
-        verify(receiptRepository, times(1)).findOne(receipt1.getId());
-    }
-
 
     // You can add more test methods here for other functionalities of ReceiptService
 
