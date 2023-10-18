@@ -24,6 +24,7 @@ public class ReceiptService {
         if (receipt == null) {
             throw new ReceiptNotFoundException("Receipt with id:" + id +"not found");
         }
+        System.out.println(receipt);
         return accumulator.accumulate(receipt);
     }
 
