@@ -16,9 +16,5 @@ public class Item {
 	@NotNull(message = "Price cannot be null")
 	@PositiveOrZero(message = "Price cannot be negative")
 	private Double price;
-	
-
-
-
 
 }
